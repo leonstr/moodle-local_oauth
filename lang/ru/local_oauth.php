@@ -31,7 +31,7 @@ $string['insert_error'] = 'При создании клиента произош
 $string['update_error'] = 'При сохранении клиента произошла ошибка';
 $string['delete_error'] = 'При удалении клиента произошла ошибка';
 
-$string['scope_user_info'] = 'Полная информация о профиле пользователя';
+$string['scope_user_info'] = 'Полная информация профиля';
 
 $string['event_user_not_granted'] = 'Отказ в доступе';
 $string['event_user_granted'] = 'Доступ предоставлен';
