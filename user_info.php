@@ -43,6 +43,7 @@ if (isset($token['user_id']) && !empty($token['user_id'])) {
     $logparams = array('userid' => $user->id);
     $event = \local_oauth\event\user_info_request::create($logparams);
     $event->trigger();
+    header('Content-Type: application/json');
     echo json_encode($user);
 } else {
     $logparams = array('other' => array('cause' => 'invalid_token'));
