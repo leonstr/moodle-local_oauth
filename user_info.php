@@ -28,6 +28,14 @@ if (isset($token['user_id']) && !empty($token['user_id'])) {
         $response->send();
     }
 
+    $rolestr = array();
+    $systemcontext = context_system::instance();
+    $roles = get_user_roles($systemcontext, $token['user_id']);
+    foreach ($roles as $role) {
+         $rolestr[] = role_get_name($role, $systemcontext, ROLENAME_SHORT);
+    }
+    $user->system_roles = $rolestr;
+
     $request = OAuth2\Request::createFromGlobals();
     $response = new OAuth2\Response();
     $scopeRequired = 'user_info';
