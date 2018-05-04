@@ -36,7 +36,7 @@ if ($scope) {
 }
 
 if ($state) {
-    $url .= '&state='.$state;
+    $url .= '&state='.urlencode($state);
 }
 
 $PAGE->set_url($CFG->wwwroot.'/local/oauth/login.php');
