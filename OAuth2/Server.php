@@ -124,6 +124,7 @@ class Server implements ResourceControllerInterface,
         foreach ($grantTypes as $key => $grantType) {
             $this->addGrantType($grantType, $key);
         }
+	$this->responseTypes = array();
         foreach ($responseTypes as $key => $responseType) {
             $this->addResponseType($responseType, $key);
         }
